@@ -1,0 +1,37 @@
+{
+    "books": [
+
+    ],
+    "mangas": [
+        {
+            "cover": "./images/vagabond.jpg",
+            "title": "Vagabond",
+            "Author": "Takehiko Inoue",
+            "Rating": "M 18+",
+            "Release date": "Mar. 23, 1999",
+            "Status": "Permanent Hiatus",
+            "#Chapters": 327,
+            "description": "A seinen that takes place during the Edo period of Japan. The story follows Miyamoto Musashi a Vagabond seeking higher skill and power as a swordsman. Although he is quite powerful, he lacks disipline and principles that his elders try and teach him, however, it takes a long time for him to learn this. This series trys to teach the reader a great deal about life, and having certain attidues towards it."
+        },
+        {
+            "cover": "./images/onepunchman.jpg",
+            "title": "One Punch Man",
+            "Author": "ONE & Murata Yuusuke",
+            "Rating": "T 13+",
+            "Release date": "Jun. 14, 2012",
+            "Status": "Ongoing",
+            "#Chapters": 205,
+            "description": "A shonen series where Japan gets constant attacks from monsters. Saitama wants to be a part of the Hero Association, a company that has a massive roster of hero's that are sent out to deal with monsters of different classifications. However, Saitama is not recognized by the Hero Association he can wipe out monsters with a single blow no matter how strong they are."
+        },
+        {
+            "cover": "./images/monster8.jpg",
+            "title": "Kaiju NO. 8",
+            "Author": "Matsumoto Naoya",
+            "Rating": "T 13+",
+            "Release date": "Nov. 4, 2022",
+            "Status": "Ongoing",
+            "#Chapters": 115,
+            "description": "A shonen with an adult protagonist who makes his living off of cleaning giant Kaiju that have been slain by the Defense Force. Altough he wants to be a part of the Defense Force, he fails the entrance exam every time. Until one day after saving his co-workers life, he becomes Monster No. 8 and uses these new found powers to not only join the Defense Force, but use them for good, however, if they were to find him out they would either kill him or use him as a lab rat."
+        }
+    ]
+}
