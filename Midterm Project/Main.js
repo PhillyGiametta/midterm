@@ -1,58 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
-    function fetchData(){
+    // Fetch and load JSON data into the catalog page
+    let mangaData = [];
+
+    function fetchData() {
         fetch("./BookManga.json")
-        .then(response => response.json())
-        .then() //function for displaying movies
+            .then(response => response.json())
+            .then(data => {
+                mangaData = data.mangas;
+                loadContent(mangaData);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
     }
 
-    /*
-        Displaay some content from the json. 
-        Title, cover, maybe author
-    */
-    function loadContent(){ //may need params
-        //TODO
+    // Load content from JSON and add to the catalog display
+    function loadContent(data) {
+        const container = document.querySelector(".row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3");
+        container.innerHTML = "";
+        data.forEach(item => {
+            const card = `
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="${item.cover}" alt="${item.title}"/>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <strong>${item.title}</strong> by ${item.author} <br>
+                                ${item.description}
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-body-secondary">${item["#chapters"] ? item["#chapters"] + ' chapters' : ''}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            container.innerHTML += card;
+        });
     }
 
-    /*
-    Displays more of the information on the item when hovering for 1 second.
-    Thinking like a "zoom in" of sorts enlarges picture, shows tagline, length of content, 
-    However, will make page go to original state when moving mouse
-    */
-   function hoverContent(){ //may need params
-    //TODO
-   }
+    // Search and filter items by title and genre
+    function searchAndFilter() {
+        const searchText = document.getElementById('descriptionInput').value.toLowerCase();
+        const selectedGenre = document.getElementById('genreSelect').value;
 
-   /*
-   Will open this contents catalog over current page (NOT OPENING NEW TAB).
-   This page will be stored in CatalogIndPages folder
-   Individual Pages will showcase all information form json
-   */
-   function openCatalogPage(){ //may need params
+        const filteredData = mangaData.filter(item => {
+            const matchesTitle = item.title.toLowerCase().includes(searchText);
+            const matchesGenre = selectedGenre === "All" || item.genre.some(genre => genre.toLowerCase() === selectedGenre.toLowerCase());
+            return matchesTitle && matchesGenre;
+        });
 
-   }
+        loadContent(filteredData);
+    }
 
-   /*
-   Search functionality added to the search bar in the page.
-   */
-   function search(){
+    // Sort catalog items by selected option (title or chapter count)
+    function sortBy(option) {
+        const container = document.querySelector(".row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3");
+        const itemsArray = Array.from(container.children);
+        
+        itemsArray.sort((a, b) => {
+            if (option === 'title') {
+                return a.querySelector('.card-text strong').textContent.localeCompare(b.querySelector('.card-text strong').textContent);
+            } else if (option === 'chapters') {
+                const aChapters = parseInt(a.querySelector('.text-body-secondary').textContent);
+                const bChapters = parseInt(b.querySelector('.text-body-secondary').textContent);
+                return aChapters - bChapters;
+            }
+        });
 
-   }
+        itemsArray.forEach(item => {
+            container.appendChild(item);
+        });
+    }
 
-   /*
-    sort/filter the content so that the user can 
-    see what they want towards the top/only
-   */
-   function sort(){
+    document.getElementById('descriptionInput').addEventListener('input', searchAndFilter);
+    document.getElementById('genreSelect').addEventListener('change', searchAndFilter);
 
-   }
-
-   //Add more functions as needed
-
-
-
-
-
-
-
-
+    fetchData();
 });
+

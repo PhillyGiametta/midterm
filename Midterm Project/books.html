@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Hugo 0.122.0">
-        <title>Library Catalog Manga</title>
+        <title>Library Catalog Books</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -143,12 +143,12 @@
                 <div class="container">
                     <a href="#" class="navbar-brand d-flex align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewbox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                        <strong>Manga</strong>
+                        <strong>Books</strong>
                     </a>
                     <nav class="d-flex">
                         <ul class="navbar-nav flex-row">
                             <li class="nav-item">
-                                <a class="nav-link px-2 text-white" href="./books.html">Books</a>
+                                <a class="nav-link px-2 text-white" href="./home.html">Manga</a>
                             </li>
                         </ul>
                     </nav>
@@ -160,18 +160,19 @@
             <section class="py-5 text-center container">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <h1 class="fw-light">Find Your Next Manga</h1>
+                        <h1 class="fw-light">Find Your Next Book</h1>
                         <div class="input-field" id="inputField">
                             <label for="descriptionInput">Enter description:</label>
-                            <input type="text" id="descriptionInput" placeholder="Find Your Next Manga" oninput="search()">
+                            <input type="text" id="descriptionInput" placeholder="Find Your Next Book" oninput="searchAndFilter()">
                         </div>
                         <div class="mt-4">
                             <label for="genreSelect">Select Genre:</label>
                             <select id="genreSelect">
-                                <option value="Fantasy">Fantasy</option>
-                                <option value="Action">Action</option>
+                                <option value="All">All</option>
+                                <option value="Classic">Classic</option>
+                                <option value="Philosophy">Philosophy</option>
                                 <option value="Drama">Drama</option>
-                                <option value="Romance">Romance</option>
+                                <option value="Satire">Satire</option>
                             </select>
                             <button id="filterGenreButton">Filter by Genre</button>
                         </div>
@@ -203,22 +204,30 @@
             </div>
         </footer>
         <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./Main.js"></script>
         <script>
+
+            // having trouble using main.js so i just put the code here lol....
             document.addEventListener('DOMContentLoaded', () => {
-                // Handle theme toggle
+                let bookData = [];
+
+                fetch('./BookManga.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        bookData = data.books;
+                        loadBooks(bookData);
+                    })
+                    .catch(error => console.error('Error fetching JSON:', error));
+
                 function handleThemeChange(theme) {
                     document.documentElement.setAttribute('data-bs-theme', theme);
                     localStorage.setItem('theme', theme);
                 }
 
-                // Apply saved theme on page load
                 function applySavedTheme() {
                     const savedTheme = localStorage.getItem('theme') || 'auto';
                     handleThemeChange(savedTheme);
                 }
 
-                // Theme toggle event listeners
                 document.querySelectorAll('[data-bs-theme-value]').forEach(button => {
                     button.addEventListener('click', () => {
                         const theme = button.getAttribute('data-bs-theme-value');
@@ -226,9 +235,68 @@
                     });
                 });
 
-                // Apply saved theme on load
                 applySavedTheme();
+
+                document.getElementById('filterGenreButton').addEventListener('click', searchAndFilter);
+                document.getElementById('sortOptionButton').addEventListener('click', () => sortBy(document.getElementById('sortSelect').value));
             });
+
+            function loadBooks(books) {
+                const container = document.getElementById('bookContainer');
+                container.innerHTML = "";
+                books.forEach(book => {
+                    const card = `
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="${book.cover}" alt="${book.title}"/>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <strong>${book.title}</strong> by ${book.author} <br>
+                                        ${book.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+                    container.innerHTML += card;
+                });
+            }
+
+            function searchAndFilter() {
+                const searchText = document.getElementById('descriptionInput').value.toLowerCase();
+                const selectedGenre = document.getElementById('genreSelect').value;
+                const cards = document.querySelectorAll('#bookContainer .card');
+
+                cards.forEach(card => {
+                    const title = card.querySelector('.card-text strong').textContent.toLowerCase();
+                    const description = card.querySelector('.card-text').textContent.toLowerCase();
+                    const genreMatches = selectedGenre === "All" || card.textContent.toLowerCase().includes(selectedGenre.toLowerCase());
+
+                    if ((title.includes(searchText) || description.includes(searchText)) && genreMatches) {
+                        card.parentElement.style.display = 'block';
+                    } else {
+                        card.parentElement.style.display = 'none';
+                    }
+                });
+            }
+
+            function sortBy(option) {
+                const container = document.querySelector(".row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3");
+                const itemsArray = Array.from(container.children);
+                
+                itemsArray.sort((a, b) => {
+                    if (option === 'title') {
+                        return a.querySelector('.card-text strong').textContent.localeCompare(b.querySelector('.card-text strong').textContent);
+                    } else if (option === 'chapters') {
+                        const aChapters = parseInt(a.querySelector('.text-body-secondary').textContent) || 0;
+                        const bChapters = parseInt(b.querySelector('.text-body-secondary').textContent) || 0;
+                        return aChapters - bChapters;
+                    }
+                });
+
+                itemsArray.forEach(item => {
+                    container.appendChild(item);
+                });
+            }
         </script>
     </body>
 </html>

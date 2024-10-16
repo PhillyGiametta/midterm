@@ -1,37 +1,113 @@
 {
     "books": [
-
+        {
+            "cover": "./images/thestranger.jpg",
+            "title": "The Stranger",
+            "author": "Albert Camus",
+            "description": "A classic of existentialism, The Stranger explores the absurdity of life and the indifference of the universe.",
+            "genre": ["Philosophy", "Classic"]
+        },
+        {
+            "cover": "./images/catcherintherye.jpg",
+            "title": "Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "description": "Catcher in the Rye is a coming-of-age novel that delves into teenage angst and alienation.",
+            "genre": ["Classic", "Coming-of-Age"]
+        },
+        {
+            "cover": "./images/crimeandpunishment.jpg",
+            "title": "Crime and Punishment",
+            "author": "Fyodor Dostoevsky",
+            "description": "Dostoevsky's Crime and Punishment explores the moral dilemmas faced by a man who believes he can justify murder.",
+            "genre": ["Philosophy", "Crime", "Classic"]
+        },
+        {
+            "cover": "./images/brotherskaramazov.jpg",
+            "title": "The Brothers Karamazov",
+            "author": "Fyodor Dostoevsky",
+            "description": "The Brothers Karamazov is a philosophical drama about faith, doubt, and the nature of free will.",
+            "genre": ["Philosophy", "Classic", "Drama"]
+        },
+        {
+            "cover": "./images/animalfarm.jpg",
+            "title": "Animal Farm",
+            "author": "George Orwell",
+            "description": "Animal Farm is a satirical allegory that depicts the rise of totalitarianism through the story of a group of farm animals who overthrow their human farmer.",
+            "genre": ["Satire", "Political", "Classic"]
+        },
+        {
+            "cover": "./images/whitenights.jpg",
+            "title": "White Nights",
+            "author": "Fyodor Dostoevsky",
+            "description": "White Nights is a gripping tale of a solitary man’s chance encounter with a mysterious woman that leads to a fateful and intense romance, set against the backdrop of a night-drenched St. Petersburg.",
+            "genre": ["Romance", "Classic", "Drama"]
+        }
     ],
     "mangas": [
         {
             "cover": "./images/vagabond.jpg",
             "title": "Vagabond",
-            "Author": "Takehiko Inoue",
-            "Rating": "M 18+",
-            "Release date": "Mar. 23, 1999",
-            "Status": "Permanent Hiatus",
-            "#Chapters": 327,
-            "description": "A seinen that takes place during the Edo period of Japan. The story follows Miyamoto Musashi a Vagabond seeking higher skill and power as a swordsman. Although he is quite powerful, he lacks disipline and principles that his elders try and teach him, however, it takes a long time for him to learn this. This series trys to teach the reader a great deal about life, and having certain attidues towards it."
+            "author": "Takehiko Inoue",
+            "rating": "M 18+",
+            "release_date": "Mar. 23, 1999",
+            "status": "Permanent Hiatus",
+                        "description": "A seinen that takes place during the Edo period of Japan. The story follows Miyamoto Musashi a Vagabond seeking higher skill and power as a swordsman. Although he is quite powerful, he lacks discipline and principles that his elders try and teach him, however, it takes a long time for him to learn this. This series tries to teach the reader a great deal about life, and having certain attitudes towards it.",
+            "genre": ["Action", "Historical"]
         },
         {
             "cover": "./images/onepunchman.jpg",
             "title": "One Punch Man",
-            "Author": "ONE & Murata Yuusuke",
-            "Rating": "T 13+",
-            "Release date": "Jun. 14, 2012",
-            "Status": "Ongoing",
-            "#Chapters": 205,
-            "description": "A shonen series where Japan gets constant attacks from monsters. Saitama wants to be a part of the Hero Association, a company that has a massive roster of hero's that are sent out to deal with monsters of different classifications. However, Saitama is not recognized by the Hero Association he can wipe out monsters with a single blow no matter how strong they are."
+            "author": "ONE & Murata Yuusuke",
+            "rating": "T 13+",
+            "release_date": "Jun. 14, 2012",
+            "status": "Ongoing",
+            "#chapters": 205,
+            "description": "A shonen series where Japan gets constant attacks from monsters. Saitama wants to be a part of the Hero Association, a company that has a massive roster of heroes that are sent out to deal with monsters of different classifications. However, Saitama is not recognized by the Hero Association he can wipe out monsters with a single blow no matter how strong they are.",
+            "genre": ["Action", "Comedy"]
         },
         {
             "cover": "./images/monster8.jpg",
             "title": "Kaiju NO. 8",
-            "Author": "Matsumoto Naoya",
-            "Rating": "T 13+",
-            "Release date": "Nov. 4, 2022",
-            "Status": "Ongoing",
-            "#Chapters": 115,
-            "description": "A shonen with an adult protagonist who makes his living off of cleaning giant Kaiju that have been slain by the Defense Force. Altough he wants to be a part of the Defense Force, he fails the entrance exam every time. Until one day after saving his co-workers life, he becomes Monster No. 8 and uses these new found powers to not only join the Defense Force, but use them for good, however, if they were to find him out they would either kill him or use him as a lab rat."
+            "author": "Matsumoto Naoya",
+            "rating": "T 13+",
+            "release_date": "Nov. 4, 2022",
+            "status": "Ongoing",
+            "#chapters": 115,
+            "description": "A shonen with an adult protagonist who makes his living off of cleaning giant Kaiju that have been slain by the Defense Force. Although he wants to be a part of the Defense Force, he fails the entrance exam every time. Until one day after saving his coworker's life, he becomes Monster No. 8 and uses these newfound powers to not only join the Defense Force, but use them for good, however, if they were to find him out they would either kill him or use him as a lab rat.",
+            "genre": ["Action", "Sci-Fi"]
+        },
+        {
+            "cover": "./images/berserk.jpg",
+            "title": "Berserk",
+            "author": "Kentaro Miura",
+            "rating": "M 18+",
+            "release_date": "Aug. 25, 1989",
+            "status": "Ongoing",
+            "#chapters": 376,
+            "description": "Berserk is a dark-fantasy manga, set during medieval times that follows the protagonist Guts. Called the \"Black Swordsman\" for his all black outfit and all black 6 foot giant sword that he swings around with ease. This series is very graphic with high amounts of gore, language, sexual violence, and overall dark themes.",
+            "genre": ["Action", "Dark Fantasy"]
+        },
+        {
+            "cover": "./images/bleach.jpg",
+            "title": "Bleach",
+            "author": "Tite Kubo",
+            "rating": "T 13+",
+            "release_date": "Aug. 20, 2001",
+            "status": "Completed",
+            "#chapters": 686,
+            "description": "Bleach is one of the Big-3, the revival series that got shonen mangas popular again after Dragon Ball finished. This story takes place in Japan with our protagonist Ichigo Kurosaki who has the power to see ghosts, but his life changes drastically with his encounter with a soul reaper. A member of the Soul Society who's main job is to exterminate Hollows, which are evil spirit that preys on living humans.",
+            "genre": ["Action", "Supernatural"]
+        },
+        {
+            "cover": "./images/dragonball.jpg",
+            "title": "Dragon Ball",
+            "author": "Akira Toriyama",
+            "rating": "T 13+",
+            "release_date": "Dec. 3, 1984",
+            "status": "Completed",
+            "#chapters": 519,
+            "description": "The most famous manga of all time. Written by Akira Toriyama (1955-2024) this series shows the journey of Son Goku, a little boy who has a monkey tail. Starting out as a comedic adventure manga, transitions into a battle-shonen manga with a diverse cast of characters and rich story. This has many story continuations from anime and other mangas. Dragon Ball was so impactful it is the main reasons shonen is the most popular genre in Japan.",
+            "genre": ["Action", "Adventure", "Comedy"]
         }
     ]
 }
