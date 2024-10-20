@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Library Home Page </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .section {
+            position: relative;
+            width: 45%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        .section span {
+            position: relative;
+            z-index: 2;
+            color: white; /* Ensures the text remains white */
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+        }
+
+        .section a {
+            position: relative;
+            z-index: 2;
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section-books {
+            background-image: url('./images/bookCollage.jpg');
+        }
+
+        .section-manga {
+            background-image: url('./images/mangaCollage.jpg');
+        }
+
+        .about-us {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .about-us a {
+            font-size: 1.5rem;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .about-us a:hover {
+            text-decoration: underline;
+        }
+        .inside{
+            text-align: center;
+            text-decoration: underline;
+            color: #0004ff;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Welcome to the Library </h1>
+
+    <div class="container">
+        <!-- Books Section -->
+        <div class="section section-books">
+            <a href="./books.html">Books</a>
+        </div>
+
+        <!-- Manga Section -->
+        <a href = "./manga.html" class = "section section-manga" > 
+            <span> Manga </span>
+        </a >
+
+    </div>
+    <div class="about-us"> <a href="AboutUs.html"> Meet the Authors </a>
+    </div>
+</body>
+
+</html>
