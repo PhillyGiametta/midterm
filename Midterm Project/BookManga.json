@@ -1,57 +1,102 @@
 {
-    "books": [
-        {
+    "books": [{
             "cover": "./images/thestranger.jpg",
             "title": "The Stranger",
             "author": "Albert Camus",
+            "rating": "M 18+",
+            "release_date": "1942",
+            "status": "Completed",
+            "#chapters": 11,
             "description": "A classic of existentialism, The Stranger explores the absurdity of life and the indifference of the universe.",
-            "genre": ["Philosophy", "Classic"]
+            "genre": [
+                "Philosophy",
+                "Classic"
+            ]
         },
         {
             "cover": "./images/catcherintherye.jpg",
             "title": "Catcher in the Rye",
             "author": "J.D. Salinger",
+            "rating": "T 13+",
+            "release_date": "1951",
+            "status": "Completed",
+            "#chapters": 26,
             "description": "Catcher in the Rye is a coming-of-age novel that delves into teenage angst and alienation.",
-            "genre": ["Classic", "Coming-of-Age"]
+            "genre": [
+                "Classic",
+                "Coming-of-Age"
+            ]
         },
         {
             "cover": "./images/crimeandpunishment.jpg",
             "title": "Crime and Punishment",
             "author": "Fyodor Dostoevsky",
+            "rating": "M 18+",
+            "release_date": "1866",
+            "status": "Completed",
+            "#chapters": 38,
             "description": "Dostoevsky's Crime and Punishment explores the moral dilemmas faced by a man who believes he can justify murder.",
-            "genre": ["Philosophy", "Crime", "Classic"]
+            "genre": [
+                "Philosophy",
+                "Crime",
+                "Classic"
+            ]
         },
         {
             "cover": "./images/brotherskaramazov.jpg",
             "title": "The Brothers Karamazov",
             "author": "Fyodor Dostoevsky",
+            "rating": "M 18+",
+            "release_date": "1880",
+            "status": "Completed",
+            "#chapters": 12,
             "description": "The Brothers Karamazov is a philosophical drama about faith, doubt, and the nature of free will.",
-            "genre": ["Philosophy", "Classic", "Drama"]
+            "genre": [
+                "Philosophy",
+                "Classic",
+                "Drama"
+            ]
         },
         {
             "cover": "./images/animalfarm.jpg",
             "title": "Animal Farm",
             "author": "George Orwell",
+            "rating": "T 13+",
+            "release_date": "1945",
+            "status": "Completed",
+            "#chapters": 10,
             "description": "Animal Farm is a satirical allegory that depicts the rise of totalitarianism through the story of a group of farm animals who overthrow their human farmer.",
-            "genre": ["Satire", "Political", "Classic"]
+            "genre": [
+                "Satire",
+                "Political",
+                "Classic"
+            ]
         },
         {
             "cover": "./images/whitenights.jpg",
             "title": "White Nights",
             "author": "Fyodor Dostoevsky",
+            "rating": "T 13+",
+            "release_date": "1848",
+            "status": "Completed",
+            "#chapters": 5,
             "description": "White Nights is a gripping tale of a solitary man’s chance encounter with a mysterious woman that leads to a fateful and intense romance, set against the backdrop of a night-drenched St. Petersburg.",
-            "genre": ["Romance", "Classic", "Drama"]
+            "genre": [
+                "Romance",
+                "Classic",
+                "Drama"
+            ]
         }
     ],
-    "mangas": [
-        {
+    "mangas": [{
             "cover": "./images/vagabond.jpg",
             "title": "Vagabond",
             "author": "Takehiko Inoue",
             "rating": "M 18+",
             "release_date": "Mar. 23, 1999",
             "status": "Permanent Hiatus",
-                        "description": "A seinen that takes place during the Edo period of Japan. The story follows Miyamoto Musashi a Vagabond seeking higher skill and power as a swordsman. Although he is quite powerful, he lacks discipline and principles that his elders try and teach him, however, it takes a long time for him to learn this. This series tries to teach the reader a great deal about life, and having certain attitudes towards it.",
+            "#chapters": 327,
+            "description": "A seinen that takes place during the Edo period of Japan. The story follows Miyamoto Musashi a Vagabond seeking higher skill and power as a swordsman. Although he is quite powerful, he lacks discipline and principles that his elders try and teach him, however, it takes a long time for him to learn this. This series tries to teach the reader a great deal about life, and having certain attitudes towards it.",
             "genre": ["Action", "Historical"]
         },
         {
@@ -108,6 +153,51 @@
             "#chapters": 519,
             "description": "The most famous manga of all time. Written by Akira Toriyama (1955-2024) this series shows the journey of Son Goku, a little boy who has a monkey tail. Starting out as a comedic adventure manga, transitions into a battle-shonen manga with a diverse cast of characters and rich story. This has many story continuations from anime and other mangas. Dragon Ball was so impactful it is the main reasons shonen is the most popular genre in Japan.",
             "genre": ["Action", "Adventure", "Comedy"]
+        },
+        {
+            "cover": "./images/heavenlydelusion.jpg",
+            "title": "Heavenly Delusion",
+            "author": "Masakazu Ishiguro",
+            "rating": "M 18+",
+            "release_date": "Jan. 25, 2018",
+            "status": "Ongoing",
+            "#chapters": 67,
+            "description": "In a world where society has collapsed, Maru and Kiruko journey across a dystopian Japan seeking a place called 'Heaven.' Along the way, they encounter various threats, including mysterious creatures known as 'Hiruko.' The story blends post-apocalyptic adventure with psychological depth as the characters uncover dark truths about their world.",
+            "genre": [
+                "Adventure",
+                "Mystery",
+                "Sci-Fi"
+            ]
+        },
+        {
+            "cover": "./images/monster.jpg",
+            "title": "Monster",
+            "author": "Naoki Urasawa",
+            "rating": "T 13+",
+            "release_date": "Dec. 5, 1994",
+            "status": "Completed",
+            "#chapters": 162,
+            "description": "Dr. Kenzo Tenma, a brilliant neurosurgeon, saves the life of a young boy who grows up to become a serial killer. As Tenma embarks on a journey to stop the 'monster' he saved, he grapples with questions of morality, guilt, and the nature of evil. This psychological thriller offers a deep, disturbing narrative about justice and redemption.",
+            "genre": [
+                "Psychological",
+                "Thriller",
+                "Mystery"
+            ]
+        },
+        {
+            "cover": "./images/fullmetal.jpg",
+            "title": "Fullmetal Alchemist",
+            "author": "Hiromu Arakawa",
+            "rating": "T 13+",
+            "release_date": "July 12, 2001",
+            "status": "Completed",
+            "#chapters": 108,
+            "description": "Two brothers, Edward and Alphonse Elric, use alchemy to try and bring their mother back from the dead, but the process costs Edward his arm and leg and leaves Alphonse’s soul trapped in a suit of armor. In their quest to restore their bodies, they uncover a government conspiracy involving the powerful Philosopher's Stone and the dark history of alchemy. The series explores themes of sacrifice, morality, and the consequences of human ambition.",
+            "genre": [
+                "Action",
+                "Fantasy",
+                "Adventure"
+            ]
         }
     ]
 }
