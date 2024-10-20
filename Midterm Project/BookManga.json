@@ -1,50 +1,94 @@
 {
-    "books": [
-        {
+    "books": [{
             "cover": "./images/thestranger.jpg",
             "title": "The Stranger",
             "author": "Albert Camus",
+            "rating": "M 18+",
+            "release_date": "1942",
+            "status": "Completed",
+            "#chapters": 1,
             "description": "A classic of existentialism, The Stranger explores the absurdity of life and the indifference of the universe.",
-            "genre": ["Philosophy", "Classic"]
+            "genre": [
+                "Philosophy",
+                "Classic"
+            ]
         },
         {
             "cover": "./images/catcherintherye.jpg",
             "title": "Catcher in the Rye",
             "author": "J.D. Salinger",
+            "rating": "T 13+",
+            "release_date": "1951",
+            "status": "Completed",
+            "#chapters": 26,
             "description": "Catcher in the Rye is a coming-of-age novel that delves into teenage angst and alienation.",
-            "genre": ["Classic", "Coming-of-Age"]
+            "genre": [
+                "Classic",
+                "Coming-of-Age"
+            ]
         },
         {
             "cover": "./images/crimeandpunishment.jpg",
             "title": "Crime and Punishment",
             "author": "Fyodor Dostoevsky",
+            "rating": "M 18+",
+            "release_date": "1866",
+            "status": "Completed",
+            "#chapters": 6,
             "description": "Dostoevsky's Crime and Punishment explores the moral dilemmas faced by a man who believes he can justify murder.",
-            "genre": ["Philosophy", "Crime", "Classic"]
+            "genre": [
+                "Philosophy",
+                "Crime",
+                "Classic"
+            ]
         },
         {
             "cover": "./images/brotherskaramazov.jpg",
             "title": "The Brothers Karamazov",
             "author": "Fyodor Dostoevsky",
+            "rating": "M 18+",
+            "release_date": "1880",
+            "status": "Completed",
+            "#chapters": 4,
             "description": "The Brothers Karamazov is a philosophical drama about faith, doubt, and the nature of free will.",
-            "genre": ["Philosophy", "Classic", "Drama"]
+            "genre": [
+                "Philosophy",
+                "Classic",
+                "Drama"
+            ]
         },
         {
             "cover": "./images/animalfarm.jpg",
             "title": "Animal Farm",
             "author": "George Orwell",
+            "rating": "T 13+",
+            "release_date": "1945",
+            "status": "Completed",
+            "#chapters": 1,
             "description": "Animal Farm is a satirical allegory that depicts the rise of totalitarianism through the story of a group of farm animals who overthrow their human farmer.",
-            "genre": ["Satire", "Political", "Classic"]
+            "genre": [
+                "Satire",
+                "Political",
+                "Classic"
+            ]
         },
         {
             "cover": "./images/whitenights.jpg",
             "title": "White Nights",
             "author": "Fyodor Dostoevsky",
+            "rating": "T 13+",
+            "release_date": "1848",
+            "status": "Completed",
+            "#chapters": 1,
             "description": "White Nights is a gripping tale of a solitary man’s chance encounter with a mysterious woman that leads to a fateful and intense romance, set against the backdrop of a night-drenched St. Petersburg.",
-            "genre": ["Romance", "Classic", "Drama"]
+            "genre": [
+                "Romance",
+                "Classic",
+                "Drama"
+            ]
         }
     ],
-    "mangas": [
-        {
+    "mangas": [{
             "cover": "./images/vagabond.jpg",
             "title": "Vagabond",
             "author": "Takehiko Inoue",
@@ -114,7 +158,7 @@
             "cover": "./images/heavenlydelusion.jpg",
             "title": "Heavenly Delusion",
             "author": "Masakazu Ishiguro",
-            "rating": "M 17+",
+            "rating": "M 18+",
             "release_date": "Jan. 25, 2018",
             "status": "Ongoing",
             "#chapters": 67,
@@ -129,7 +173,7 @@
             "cover": "./images/monster.jpg",
             "title": "Monster",
             "author": "Naoki Urasawa",
-            "rating": "T 16+",
+            "rating": "T 13+",
             "release_date": "Dec. 5, 1994",
             "status": "Completed",
             "#chapters": 162,
